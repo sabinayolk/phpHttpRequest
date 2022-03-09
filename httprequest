@@ -1,2 +1,19 @@
-<?php try{$data = array("name" => "Sabina Khan", "email" => "sabina.khan@a3logics.in", "url": "github.com/john-doe/http-client");$url = "corednacom.corewebdna.com/assessment-endpoint.php";$options = array('http' => array('method' => 'POST', 'content' => json_encode($data), 'headers' => array('Content-Type:application/json', 'Authorization: Bearer abcdefg')));$createContext = stream_context_create($options);$fOpen = fopen($url, 'rb', false, $createContext);$response = stream_get_contents($fOpen);print_r($response);} catch(Exception $e) { echo $e->getCode();}
+<?php try{
+
+$data = array("name" => "Sabina Khan", "email" => "sabina.khan@a3logics.in", "url": "https://github.com/sabinayolk/phpHttpRequest");
+
+$url = "corednacom.corewebdna.com/assessment-endpoint.php";
+
+$options = array('http' => array('method' => 'POST', 'content' => json_encode($data), 'headers' => array('Content-Type:application/json', 'Authorization: Bearer abcdefg')));
+
+$createContext = stream_context_create($options);
+
+$fOpen = fopen($url, 'rb', false, $createContext);
+
+$response = stream_get_contents($fOpen);print_r($response);} 
+
+catch(Exception $e) { 
+
+echo $e->getCode();}
+
 ?>
